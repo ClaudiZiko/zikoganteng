@@ -1,25 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ziko is medsos</title>
+    <title>Ziko's Medsos</title>
     <style>
-        .resposive {
-            width: auto;
-            height: auto;
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            color: white;
+            height: 100%;
+            overflow: hidden;
         }
+
+        /* Background Video */
+        video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            min-width: 100%;
+            min-height: 100%;
+            z-index: -1;
+            object-fit: cover;
+        }
+
+        h3 {
+            font-size: 3em;
+            color: #00ffcc;
+            margin-top: 100px;
+            text-shadow: 2px 2px 4px #000;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            font-size: 1.5em;
+            margin-top: 40px;
+        }
+
+        ul li {
+            margin: 15px 0;
+        }
+
+        ul a {
+            color: #00ffcc;
+            text-decoration: none;
+            font-size: 1.8em;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        ul a:hover {
+            color: #ff4081;
+        }
+
+        a#back {
+            display: inline-block;
+            margin-top: 40px;
+            background-color: #00ffcc;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 1.2em;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+
+        a#back:hover {
+            background-color: #ff4081;
+        }
+
     </style>
 </head>
+
 <body>
-    <h3 align="center">Jangan Lupa Follow</h3>
-    <ul type="disc">
-    <a href="https://facebook.com/ZikoZee.kun?mibextid=ZbWKwL"><li>Facebook</li></a>
-    <br>
-    <a href="https://www.tiktok.com/@niziko_zee7?_t=8IPIULsBZ8Z&_r=1"><li>TikTok</li></a>
+    <!-- Background video -->
+    <video autoplay muted loop>
+    <source src="https://your-github-username.github.io/your-repository-name/ssstik.io_@adit.syahfiar_1728097368906.mp4" type="video/mp4">
+    Your browser does not support HTML5 video.
+</video>
+
+    <h3>Jangan Lupa Follow</h3>
+
+    <ul>
+        <li><a href="https://facebook.com/ZikoZee.kun?mibextid=ZbWKwL">Facebook</a></li>
+        <li><a href="https://www.tiktok.com/@niziko_zee7?_t=8IPIULsBZ8Z&_r=1">TikTok</a></li>
     </ul>
-<br>
-<br>
-    <a href="home.html">kembali</a>
+
+    <a href="home.html" id="back">Kembali</a>
+
 </body>
+
 </html>
