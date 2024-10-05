@@ -2,25 +2,87 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>iswan punya cerita</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iswan Punya Cerita</title>
     <style>
-        .resposive {
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #1f1c2c, #928dab); /* Futuristic gradient background */
+            color: #fff;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .container {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
+        }
+
+        h3 {
+            font-size: 2em;
+            margin-bottom: 20px;
+            color: #00fff7; /* Neon blue heading */
+        }
+
+        p {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+            color: #e0e0e0; /* Lighter text color */
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin: 15px 0;
+            background-color: #222;
+            padding: 15px;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        li:hover {
+            background-color: #444;
+            box-shadow: 0 0 15px #00fff7;
+        }
+
+        a {
+            text-decoration: none;
+            color: #00fff7; /* Futuristic link color */
+            font-size: 1.2em;
+        }
+
+        a:hover {
+            color: #ff4081; /* Hover color */
+        }
+
+        /* Responsive image */
+        .responsive {
             width: auto;
             height: auto;
+            max-width: 100%;
         }
+        
     </style>
 </head>
 <body>
-    <h3  align="center">Informasi ziko ada di sini!</h3>
-    <p>kotinggal pilih saja <br> jangan ko susah sekali jadi orang _-</p>
-   <ol>
-    <ul type="disc">
-    <a href="contact.html"><li>Kontak</li></a>
-    <a href="medsos.html"><li>Media Sosial</li></a>
-    <a href="game.html"><li>Game UID</li></a>
-      <a href="biodata.html"><li>Biodata</li></a>
-    </ul>
-   </ol>
+    <div class="container">
+        <h3>Informasi Ziko Ada di Sini!</h3>
+        <p>Kotinggal pilih saja <br> Jangan ko susah sekali jadi orang _-</p>
+        <ul>
+            <li><a href="contact.html">Kontak</a></li>
+            <li><a href="medsos.html">Media Sosial</a></li>
+            <li><a href="game.html">Game UID</a></li>
+            <li><a href="biodata.html">Biodata</a></li>
+        </ul>
+    </div>
 </body>
 </html>
