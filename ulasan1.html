@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Iswan Punya Cerita</title>
+    <title>Formulir Ulasan</title>
     <style>
         body {
             margin: 0;
@@ -26,90 +26,27 @@
             width: 100%;
         }
 
-        h3 {
-            font-size: 2em;
-            margin-bottom: 20px;
-            color: #00fff7;
-        }
-
-        p {
-            font-size: 1.2em;
-            margin-bottom: 20px;
-            color: #e0e0e0;
-        }
-
-        .review-form {
-            margin-top: 20px;
-        }
-
-        input[type="text"],
-        textarea {
-            width: 100%;
-            padding: 10px;
-            margin: 5px 0;
-            border: none;
-            border-radius: 5px;
-        }
-
-        input[type="submit"] {
+        input[type="button"] {
             background-color: #00fff7;
             color: #222;
             border: none;
-            padding: 10px;
+            padding: 15px;
             border-radius: 5px;
             cursor: pointer;
             transition: background-color 0.3s;
+            font-size: 1.2em;
         }
 
-        input[type="submit"]:hover {
+        input[type="button"]:hover {
             background-color: #ff4081;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h3>Silakan Berikan Ulasan Anda</h3>
-        <p>Ulasan Anda mungkin tidak membuat saya kaya, tapi bisa bikin saya ketawa! <br> Jadi, ayo tulis yang lucu!</p>
-        <div class="review-form">
-            <h4>Tinggalkan Ulasan</h4>
-            <form id="reviewForm" onsubmit="sendEmail(event)">
-                <input type="text" name="name" id="name" placeholder="Nama Anda" required>
-                <textarea name="review" id="review" rows="4" placeholder="Tulis ulasan Anda" required></textarea>
-                <input type="submit" value="Kirim Ulasan">
-            </form>
-        </div>
+        <h3>Silakan Lanjutkan Memberi Ulasan</h3>
+        <p>Klik tombol di bawah untuk mengisi ulasan!</p>
+        <input type="button" value="Isi Ulasan" onclick="window.location.href='https://docs.google.com/forms/d/e/1FAIpQLScuZClLrv6RBfWm-zBpvwH2rfZVBlBK-GJ7OE0Mkw0rdo-mFA/viewform?usp=sharing'" />
     </div>
-    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
-    <script type="text/javascript">
-        (function(){
-            emailjs.init("tzoRB_LZGF8wtt6Ok"); // Ganti dengan User ID dari EmailJS
-        })();
-
-        function sendEmail(event) {
-            event.preventDefault(); // Mencegah form default submit (redirect)
-
-            const name = document.getElementById('name').value;
-            const review = document.getElementById('review').value;
-
-            console.log("Sending email with the following data:");
-            console.log("Name: " + name);
-            console.log("Review: " + review);
-
-            emailjs.send("service_tpu5n9b", "template_vbc0gpt", {
-                from_name: name,
-                message: review
-            })
-            .then(function(response) {
-                console.log("Email sent successfully", response);
-                alert("Ulasan Anda telah berhasil dikirim!");
-            }, function(error) {
-                console.error("Failed to send email", error);
-                alert("Terjadi kesalahan saat mengirim ulasan: " + JSON.stringify(error));
-            });
-
-            // Reset form setelah pengiriman
-            document.getElementById('reviewForm').reset();
-        }
-    </script>
 </body>
 </html>
