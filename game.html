@@ -15,16 +15,7 @@
             color: white;
             margin: 0;
             padding: 0;
-            animation: fadeIn 2s ease-in-out;
-        }
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-            }
-            to {
-                opacity: 1;
-            }
+            overflow-x: hidden;
         }
 
         h3 {
@@ -32,18 +23,11 @@
             color: #00ffcc;
             font-size: 2.5em;
             text-shadow: 3px 3px 6px #000;
-            animation: slideDown 1.5s ease;
-        }
-
-        @keyframes slideDown {
-            0% {
-                transform: translateY(-50px);
-                opacity: 0;
-            }
-            100% {
-                transform: translateY(0);
-                opacity: 1;
-            }
+            padding: 10px; /* Tambahkan padding */
+            background-color: rgba(0, 0, 0, 0.6); /* Latar belakang semi-transparan */
+            border-radius: 8px; /* Sudut melengkung */
+            opacity: 0;
+            animation: fadeIn 2s ease forwards; /* Animasi fade-in */
         }
 
         .container {
@@ -54,7 +38,7 @@
             border-radius: 10px;
             box-shadow: 0 0 15px rgba(0, 0, 0, 0.8);
             margin-top: 50px; /* Tambahkan jarak dari atas */
-            animation: fadeIn 2s ease-in-out;
+            animation: slideIn 1.5s ease forwards; /* Animasi slide-in */
         }
 
         ul {
@@ -67,22 +51,18 @@
             font-size: 1.5em;
             color: #ffcc00;
             text-transform: uppercase;
-            transition: color 0.3s ease;
-        }
-
-        li:hover {
-            color: #ff4081; /* Animasi perubahan warna saat hover */
+            opacity: 0;
+            animation: fadeInUp 2s ease forwards; /* Animasi fade-in dari bawah */
+            animation-delay: 1s;
         }
 
         p {
             font-size: 1.2em;
             margin: 5px 0;
             color: #fff;
-            transition: color 0.3s ease;
-        }
-
-        p:hover {
-            color: #00ffcc; /* Animasi perubahan warna saat hover */
+            opacity: 0;
+            animation: fadeInUp 2s ease forwards;
+            animation-delay: 1.5s;
         }
 
         a {
@@ -94,28 +74,62 @@
             font-size: 1.2em;
             text-decoration: none;
             border-radius: 5px;
-            transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            opacity: 0;
+            animation: fadeInUp 2s ease forwards;
+            animation-delay: 2s;
         }
 
         a:hover {
             background-color: #ff4081;
             color: white;
-            transform: scale(1.1); /* Tombol membesar saat hover */
         }
 
+        /* Animasi fade-in */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* Animasi slide-in dari atas */
+        @keyframes slideIn {
+            from {
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        /* Animasi fade-in dari bawah */
+        @keyframes fadeInUp {
+            from {
+                transform: translateY(20px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
     </style>
 </head>
 
 <body>
+    <h3>Salin UID atau Nickname-ku!</h3>
     <div class="container">
-        <h3>Salin UID atau Nickname-ku!</h3>
         <ul>
             <li>PUBG Mobile
-                <p>NICK : Zeeくん</p>
+                <p>NICK : MrōZeeくん٭</p>
                 <p>UID  : 5638765675</p>
             </li>
         </ul>
-
         <a href="home.html">Kembali</a>
     </div>
 </body>
