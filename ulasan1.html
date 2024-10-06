@@ -91,6 +91,10 @@
             const name = document.getElementById('name').value;
             const review = document.getElementById('review').value;
 
+            console.log("Sending email with the following data:");
+            console.log("Name: " + name);
+            console.log("Review: " + review);
+
             emailjs.send("service_tpu5n9b", "template_vbc0gpt", {
                 from_name: name,
                 message: review
@@ -100,7 +104,7 @@
                 alert("Ulasan Anda telah berhasil dikirim!");
             }, function(error) {
                 console.error("Failed to send email", error);
-                alert("Terjadi kesalahan saat mengirim ulasan. Silakan coba lagi.");
+                alert("Terjadi kesalahan saat mengirim ulasan: " + JSON.stringify(error));
             });
 
             // Reset form setelah pengiriman
