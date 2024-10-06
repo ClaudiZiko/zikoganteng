@@ -1,30 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>my id game</title>
+    <title>My ID Game - PUBG Style</title>
     <style>
-        .resposive {
-            width: auto;
-            height: auto;
+        /* Pengaturan gaya untuk tampilan PUBG */
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('https://wallpapercave.com/wp/wp3229260.jpg'); /* Ganti dengan URL gambar PUBG */
+            background-size: cover;
+            background-position: center;
+            color: white;
+            margin: 0;
+            padding: 0;
+            animation: fadeIn 2s ease-in-out;
         }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        h3 {
+            text-align: center;
+            color: #00ffcc;
+            font-size: 2.5em;
+            text-shadow: 3px 3px 6px #000;
+            animation: slideDown 1.5s ease;
+        }
+
+        @keyframes slideDown {
+            0% {
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .container {
+            margin: 0 auto;
+            padding: 20px;
+            max-width: 600px;
+            background-color: rgba(0, 0, 0, 0.8); /* Semi-transparan untuk kontras dengan teks */
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.8);
+            margin-top: 50px; /* Tambahkan jarak dari atas */
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 30px;
+            font-size: 1.5em;
+            color: #ffcc00;
+            text-transform: uppercase;
+            transition: color 0.3s ease;
+        }
+
+        li:hover {
+            color: #ff4081; /* Animasi perubahan warna saat hover */
+        }
+
+        p {
+            font-size: 1.2em;
+            margin: 5px 0;
+            color: #fff;
+            transition: color 0.3s ease;
+        }
+
+        p:hover {
+            color: #00ffcc; /* Animasi perubahan warna saat hover */
+        }
+
+        a {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 25px;
+            background-color: #00ffcc;
+            color: #000;
+            font-size: 1.2em;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+        }
+
+        a:hover {
+            background-color: #ff4081;
+            color: white;
+            transform: scale(1.1); /* Tombol membesar saat hover */
+        }
+
     </style>
 </head>
-<body>
-    <h3 align="center">kalian salin aja UID atau NICK Name ku</h3>
-    <ol>
-        <ul type="disc">
-            <li>PUBG Mobile</li>
-            <p>NICK : Zeeくん</p>
-            <p>UID  : 5638765675</p>
-            <br>
-            <li>Free Fire</li>
-            <p>NICK : -</p>
-            <p>UID  : -</p>
-        </ul>
-    </ol>
 
-    <a href="home.html">kembali</a>
+<body>
+    <div class="container">
+        <h3>Salin UID atau Nickname-ku!</h3>
+        <ul>
+            <li>PUBG Mobile
+                <p>NICK : Zeeくん</p>
+                <p>UID  : 5638765675</p>
+            </li>
+        </ul>
+
+        <a href="home.html">Kembali</a>
+    </div>
 </body>
+
 </html>
